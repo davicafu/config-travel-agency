@@ -4,8 +4,6 @@ server:
     context-path: /
 
 spring:
-  #application:
-  #  name: courses-service # move to bootstrap.yml
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
     #url: jdbc:mariadb://localhost:3306/test
