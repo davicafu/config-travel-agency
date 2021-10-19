@@ -1,0 +1,18 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /
+
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    #url: jdbc:mariadb://localhost:3306/test
+    url: jdbc:mariadb://192.168.0.21:3306/test #only for testing docker release
+    username: uservice
+    password: uservicep
+  # necessary for translate sql queries
+  jpa:
+    hibernate:
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
