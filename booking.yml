@@ -10,11 +10,10 @@ spring:
     url: jdbc:mariadb://192.168.0.21:3306/test #only for testing docker release
     username: uservice
     password: uservicep
-  # necessary for translate sql queries
+  # necessary for translate sql queries and avoid hibernate_sequence error
   jpa:
     hibernate:
       naming:
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-	# avoid error hibernate_sequence doesn't exist
       use-new-id-generator-mappings: false
